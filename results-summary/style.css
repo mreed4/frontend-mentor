@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  /* Primary colors */
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Neutral colors */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* Gradient colors */
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  --gradient-blue-purple: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+
+  background-color: var(--pale-blue);
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+
+  --main-width: 38rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: var(--main-width);
+  background-color: var(--white);
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.container > div {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc(var(--main-width) / 2);
+}
+
+.results {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--white);
+  border-radius: 1.75rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background: var(--gradient-blue-purple);
+}
+
+.results h2 {
+  color: var(--light-lavender);
+}
+
+.circle {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--main-width) / 4);
+  height: calc(var(--main-width) / 4);
+  background-color: var(--white);
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, var(--violet-blue), var(--persian-blue));
+}
+
+.score {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.of-100 {
+  color: var(--light-lavender);
+  font-weight: 700;
+}
+
+.great > span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.great > p {
+  color: var(--pale-blue);
+}
+
+.summary {
+  height: 100%;
+  color: var(--dark-gray-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.summary h2 {
+  color: var(--dark-gray-blue);
+  align-self: flex-start;
+}
+
+.score-part {
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.score-part:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.icon-and-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.score-part.reaction {
+  color: var(--light-red);
+  background-color: hsla(0, 100%, 67%, 0.05);
+}
+
+.score-part.memory {
+  color: var(--orangey-yellow);
+  background-color: hsla(39, 100%, 56%, 0.05);
+}
+
+.score-part.verbal {
+  color: var(--green-teal);
+  background-color: hsla(166, 100%, 37%, 0.05);
+}
+
+.score-part.visual {
+  color: var(--cobalt-blue);
+  background-color: hsla(234, 85%, 45%, 0.05);
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+.score-x-of-100 {
+  color: hsla(224, 30%, 27%, 0.5);
+  /* font-weight: 500; */
+}
+
+.score-x-of-100 > span {
+  color: var(--dark-gray-blue);
+}
+
+button.main-button {
+  /* margin-top: 2rem; */
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+button.main-button:hover {
+  background: var(--gradient-blue-purple);
+}
+
+@media screen and (max-width: 375px) {
+  body,
+  html {
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0 0 2rem 2rem;
+  }
+
+  .results {
+    border-radius: 0 0 1.75rem 1.75rem;
+  }
+
+  .container > div {
+    width: 100%;
+  }
+}
