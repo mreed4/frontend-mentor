@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
+
+:root {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  --white: hsla(0, 0%, 100%, 1);
+
+  --white-10: hsla(0, 0%, 100%, 0.1);
+  --white-25: hsla(0, 0%, 100%, 0.25);
+  --white-40: hsla(0, 0%, 100%, 0.4);
+  --white-50: hsla(0, 0%, 100%, 0.5);
+  --white-80: hsla(0, 0%, 100%, 0.8);
+  --very-light-blue: hsla(231, 77%, 90%, 1);
+  --black: hsla(230, 35%, 7%, 1);
+
+  color: var(--white);
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  user-select: none;
+}
+
+:root:has(section.destinations-page) {
+  background-image: url("/img/destination/background-destination-desktop.jpg");
+}
+
+:root:has(section.start-page) {
+  background-image: url("/img/home/background-home-desktop.jpg");
+}
+
+:root:has(section.technologies-page) {
+  background-image: url("/img/technology/background-technology-desktop.jpg");
+}
+
+:root:has(section.crew-page) {
+  background-image: url("/img/crew/background-crew-desktop.jpg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+hr {
+  border: 0;
+  border-top: 2px solid var(--white-25);
+  margin: 2rem 0;
+  width: 473px;
+  transform: translateX(9rem);
+  z-index: 2;
+}
+
+body {
+  min-height: 100vh;
+  padding: 0 2rem;
+}
+
+header,
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main {
+  height: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+nav {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.crew-page nav {
+  position: absolute;
+  bottom: 5rem;
+}
+
+nav ol {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28px;
+  letter-spacing: 4.72px;
+}
+
+section:not(.start-page) h2 {
+  margin-bottom: 6rem;
+}
+
+h4 {
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 100px;
+  font-family: "Bellefair", serif;
+}
+
+.crew-member-page .pseudo-header {
+  display: block;
+  font-family: "Bellefair", serif;
+  font-size: 32px;
+  line-height: 36.67px;
+  color: var(--white-50);
+  margin-bottom: 1rem;
+}
+
+.crew-member-page h3,
+.technologies-page h3 {
+  font-size: 56px;
+  line-height: 64.18px;
+  margin: 1rem 0 2rem;
+}
+
+h4 {
+  font-size: 14px;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2.35px;
+  color: var(--very-light-blue);
+}
+
+p {
+  line-height: 32px;
+  color: var(--very-light-blue);
+}
+
+section .content p {
+  width: 444px;
+}
+
+.destination-page .content p {
+  padding-bottom: 2em;
+  border-bottom: 2px solid hsla(231, 15%, 26%, 1);
+}
+
+h4 + span {
+  font-family: "Bellefair", serif;
+  font-size: 28px;
+  line-height: 32.09px;
+  color: var(--white);
+}
+
+#root {
+  min-height: 100vh;
+  padding-top: 3rem;
+}
+
+article,
+section.start-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.start-page {
+  margin-top: 10rem;
+}
+
+article.crew-member-page {
+  flex-direction: row-reverse;
+}
+
+article.technology-page {
+  align-items: flex-start;
+}
+
+section.start-page .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: fit-content;
+}
+
+section:not(.start-page) .content {
+  width: 600px;
+}
+
+section.crew-page .content {
+  width: 700px;
+}
+
+section.start-page .button-wrapper {
+  width: 450px;
+}
+
+section .planet-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+article .stats {
+  max-width: 444px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+article .stats div {
+  margin-right: 2rem;
+}
+
+.start-page h2 {
+  color: var(--very-light-blue);
+}
+
+.start-page h2 span {
+  font-size: 150px;
+  font-family: "Bellefair", serif;
+  line-height: 171.9px;
+  color: var(--white);
+  display: block;
+  margin: 2rem 0;
+}
+
+section.destinations-page nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+ol.main-nav-list {
+  /* https://stackoverflow.com/questions/3153019/remove-decimal-from-ordered-ol-list-via-css */
+  /* https://stackoverflow.com/questions/59850209/how-to-make-first-li-value-0-and-then-increment-by-2-using-css-counter */
+  counter-reset: item -1;
+  background-color: var(--white-10);
+  backdrop-filter: blur(1.5rem);
+  padding-right: 2rem;
+  /* border-radius: 1rem; */
+}
+
+ol.main-nav-list li {
+  display: flex;
+  align-items: center;
+  margin-left: 2.5rem;
+  letter-spacing: 2.7px;
+  line-height: 19.2px;
+  font-size: 16px;
+}
+
+ol.main-nav-list li a {
+  color: var(--white-80);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+}
+
+ol.main-nav-list li a span {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: transparent;
+  transition: color 150ms ease-in-out, text-decoration-color 150ms ease-in-out;
+}
+
+ol.main-nav-list li a:hover {
+  color: var(--white);
+}
+
+ol.main-nav-list li a.active span,
+ol.main-nav-list li a.active:hover span {
+  text-decoration-color: var(--white);
+}
+
+ol.main-nav-list li a:hover span {
+  text-decoration-color: var(--white-50);
+}
+
+ol.main-nav-list li a::before {
+  display: block;
+  padding-right: 0.5rem;
+  content: "0" counter(item);
+  counter-increment: item;
+  font-weight: 700;
+  color: var(--white-50);
+  transition: color 150ms ease-in-out;
+}
+
+ol.main-nav-list li a.active,
+ol.main-nav-list li a:hover::before,
+ol.main-nav-list li a.active::before {
+  color: var(--white);
+}
+
+ol.destinations-nav-list {
+  width: 600px;
+}
+
+ol.destinations-nav-list li {
+  margin-right: 1.5rem;
+  letter-spacing: 2.7px;
+  line-height: 19.2px;
+  font-size: 16px;
+}
+
+ol.destinations-nav-list li a {
+  color: var(--very-light-blue);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: transparent;
+  transition: color 150ms ease-in-out, text-decoration-color 150ms ease-in-out;
+}
+
+ol.destinations-nav-list li a:hover {
+  text-decoration-color: var(--white-50);
+  color: var(--white);
+}
+
+ol.destinations-nav-list li a.active {
+  text-decoration-color: var(--white);
+  color: var(--white);
+}
+
+ol.crew-nav-list li {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 1rem;
+}
+
+ol.crew-nav-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid var(--white-50);
+}
+
+ol.crew-nav-list li a:hover {
+  background-color: var(--white-50);
+  border: 2px solid var(--white);
+}
+
+ol.crew-nav-list li a.active {
+  background-color: var(--white);
+  border: 2px solid var(--white);
+}
+
+p.normal {
+  text-transform: none;
+}
+
+.section-num {
+  font-weight: 700;
+  color: var(--white-25);
+}
+
+.start-page button {
+  display: block;
+  background-color: var(--white);
+  border: 0;
+  border-radius: 50%;
+  width: 274px;
+  height: 274px;
+  cursor: pointer;
+  font-size: 32px;
+  color: var(--black);
+  font-family: "Bellefair", serif;
+  box-shadow: 0 0 0 0 transparent;
+  transition: scale 0.2s ease-in-out;
+  animation: pulse 2000ms infinite ease-in-out;
+}
+
+.start-page button:hover {
+  scale: 1.1;
+}
+
+.crew-member-page .portrait-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.crew-member-page .portrait-wrapper img {
+  position: absolute;
+  bottom: 0;
+}
+
+.technologies-page .content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* align-items: center; */
+}
+
+ol.technologies-nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 2rem;
+}
+
+ol.technologies-nav-list li {
+  margin-bottom: 1rem;
+  width: 80px;
+  height: 80px;
+}
+
+ol.technologies-nav-list li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid var(--white-50);
+  font-family: "Bellfair", serif;
+  font-size: 32px;
+}
+
+ol.technologies-nav-list li a.active {
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  color: var(--black);
+}
+
+.technology-page img.desktop {
+  display: block;
+  width: 515px;
+  height: 527px;
+  object-fit: cover;
+}
+
+.technology-page img.mobile,
+.technology-page img.tablet {
+  display: none;
+}
+
+.technology-page .pseudo-header {
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  line-height: 19.2px;
+  letter-spacing: 2.7px;
+  color: var(--very-light-blue);
+}
+
+.technology-page .content {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--white-10);
+  }
+  50% {
+    box-shadow: 0 0 0 88px var(--white-10);
+  }
+  100% {
+    box-shadow: 0 0 0 0 var(--white-10);
+  }
+}
+
+@keyframes fly-and-fade {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
